@@ -7,8 +7,8 @@ exports.up = function(knex) {
     table.increments('id').primary();
     table.string('title').notNullable();
     table.string('main_character');
-    table.integer('year_released').notNullable();
-  });
+    table.integer('year_released');
+  })
 };
 
 /**
@@ -16,5 +16,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  knex.schema.dropTableIfExists('favorites');
+  return knex.schema.dropTableIfExists('favorites');
 };
