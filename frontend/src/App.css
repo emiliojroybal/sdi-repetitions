@@ -1,0 +1,10 @@
+.movies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+}
